@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-<<<<<<< HEAD
 type Player = 'X' | 'O'
 type SquareValue = Player | null
 type Squares = SquareValue[]
