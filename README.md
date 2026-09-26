@@ -1,21 +1,21 @@
-# SUPER GOMOKU for React
+# SUPER 三目並べ for React
 
-> 三目並べを「Super 五目並べ」に育てながら学ぶ JavaScript / React / TypeScript
+> Reactチュートリアルの三目並べを「Super 三目並べ」に育てながら学ぶ JavaScript / React / TypeScript
 
 ## About
 
-**SUPER GOMOKU for React** は、React公式Tutorialのゲームを出発点に、React / TypeScript / JavaScriptをグループで学ぶためのプロジェクトです。
+**SUPER 三目並べ for React** は、React公式Tutorialのゲームを出発点に、React / TypeScript / JavaScriptをグループで学ぶためのプロジェクトです。
 
 単にReactのAPIをできるだけ多く使うことは目的にしません。
 
 React公式ドキュメントで学んだ概念について、
 
-- Super Gomokuではどこに適用できるか
+- Super 三目並べではどこに適用できるか
 - その設計にする理由は何か
 - あえて使わない方がよい場合はなぜか
 - そのコードのどこがReact / TypeScript / JavaScriptなのか
 
-をチームで考えながら、普通のゲームを少しずつ **SUPER GOMOKU** に進化させます。
+をチームで考えながら、普通のゲームを少しずつ **SUPER 三目並べ** に進化させます。
 
 ## Goal
 
@@ -28,15 +28,15 @@ React公式ドキュメントで学んだ概念について、
 1. React公式Tutorialをベースにゲームを実装する
 2. 実装に登場したReact / JavaScript / TypeScriptの概念を整理する
 3. React公式ドキュメントを読み、Tutorialだけでは登場しない概念も学ぶ
-4. 各概念をSuper Gomokuへ適用すべきかチームで検討する
+4. 各概念をSuper 三目並べへ適用すべきかチームで検討する
 5. 必要な機能を設計・実装する
 6. PRレビューで「何を使ったか」だけでなく「なぜそうしたか」を説明する
 
 ## React Coverage
 
-React公式ドキュメントの内容について、Super Gomokuとの対応を整理していきます。
+React公式ドキュメントの内容について、Super 三目並べとの対応を整理していきます。
 
-| Concept | Super Gomokuでの候補 | Decision | Why? |
+| Concept | Super 三目並べでの候補 | Decision | Why? |
 | --- | --- | --- | --- |
 | Components | Board / Cell / Game など | TBD | |
 | Props | 盤面・イベントの受け渡し | TBD | |
