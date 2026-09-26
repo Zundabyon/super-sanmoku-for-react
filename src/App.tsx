@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+<<<<<<< HEAD
 type Player = 'X' | 'O'
 type SquareValue = Player | null
 type Squares = SquareValue[]
@@ -65,7 +66,7 @@ function Board({ xIsNext, squares, onPlay }: BoardProps) {
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
     </>
-  )
+  );
 }
 
 export default function Game() {
@@ -107,11 +108,7 @@ export default function Game() {
   return (
     <div className="game">
       <div className="game-board">
-        <Board
-          xIsNext={xIsNext}
-          squares={currentSquares}
-          onPlay={handlePlay}
-        />
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
         <ol>{moves}</ol>
