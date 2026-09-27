@@ -122,6 +122,8 @@ button {
   justify-content: center;
   align-items: center;
 
+  position: relative;
+
   border:
     1px solid rgba(62, 33, 7, 0.75);
 
@@ -146,25 +148,16 @@ button {
 
   cursor: pointer;
 
-  position: relative;
-
   transition:
     background 0.15s ease,
     box-shadow 0.15s ease,
     transform 0.1s ease,
     filter 0.15s ease;
-
-  text-shadow:
-    0 1px 0 #555,
-    0 2px 0 #444,
-    0 3px 0 #333,
-    0 4px 0 #222,
-    0 7px 8px rgba(0, 0, 0, 0.45);
 }
 
 
 /* =========================
-   空いてるマス
+   空いているマス
 ========================= */
 
 .square:empty:hover {
@@ -184,7 +177,7 @@ button {
 
 
 /* =========================
-   駒を置いたマス
+   駒が置かれたマス
 ========================= */
 
 .square:not(:empty) {
@@ -198,7 +191,8 @@ button {
 
 
 /* =========================
-   X：黒い鉄
+   X
+   黒い鉄っぽい駒
 ========================= */
 
 .square-x {
@@ -207,18 +201,18 @@ button {
   background:
     radial-gradient(
       circle at 50% 45%,
-      rgba(120, 130, 140, 0.22),
+      rgba(130, 140, 150, 0.2),
       rgba(40, 43, 47, 0.08) 42%,
       rgba(90, 45, 8, 0.08) 75%
     );
 
   text-shadow:
-    0 1px 0 #8b9299,
-    0 2px 0 #686e74,
-    0 3px 0 #4d5257,
-    0 4px 0 #35393d,
-    0 5px 0 #222529,
-    0 7px 0 #121417,
+    0 1px 0 #9aa0a6,
+    0 2px 0 #747a80,
+    0 3px 0 #565b60,
+    0 4px 0 #3c4146,
+    0 5px 0 #292d31,
+    0 7px 0 #15181b,
     0 12px 10px rgba(0, 0, 0, 0.55);
 
   filter:
@@ -227,11 +221,48 @@ button {
     );
 }
 
+
+/* =========================
+   O
+   赤い立体リング
+========================= */
+
+.square-o {
+  color: #d72f2f;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255, 120, 120, 0.2),
+      rgba(150, 20, 20, 0.08) 45%,
+      rgba(90, 45, 8, 0.08) 75%
+    );
+
+  text-shadow:
+    0 1px 0 #ff9d9d,
+    0 2px 0 #ef6d6d,
+    0 3px 0 #d94b4b,
+    0 4px 0 #b62f2f,
+    0 5px 0 #8c2020,
+    0 7px 0 #5f1111,
+    0 12px 10px rgba(80, 0, 0, 0.5);
+
+  filter:
+    drop-shadow(
+      0 7px 4px rgba(110, 0, 0, 0.4)
+    );
+}
+
+
+/* =========================
+   X hover
+========================= */
+
 .square-x:hover {
   background:
     radial-gradient(
       circle at 50% 45%,
-      rgba(160, 170, 180, 0.25),
+      rgba(170, 180, 190, 0.24),
       rgba(40, 43, 47, 0.1) 42%,
       rgba(90, 45, 8, 0.08) 75%
     );
@@ -239,48 +270,23 @@ button {
 
 
 /* =========================
-   O：赤い立体リング
+   O hover
 ========================= */
-
-.square-o {
-  color: #b52b2b;
-
-  background:
-    radial-gradient(
-      circle at 50% 45%,
-      rgba(255, 110, 110, 0.18),
-      rgba(135, 20, 20, 0.08) 45%,
-      rgba(90, 45, 8, 0.08) 75%
-    );
-
-  text-shadow:
-    0 1px 0 #f48b8b,
-    0 2px 0 #df6969,
-    0 3px 0 #c94b4b,
-    0 4px 0 #a82e2e,
-    0 5px 0 #7f1c1c,
-    0 7px 0 #541010,
-    0 12px 10px rgba(70, 0, 0, 0.45);
-
-  filter:
-    drop-shadow(
-      0 7px 4px rgba(95, 0, 0, 0.35)
-    );
-}
 
 .square-o:hover {
   background:
     radial-gradient(
       circle at 50% 45%,
-      rgba(255, 140, 140, 0.22),
-      rgba(135, 20, 20, 0.1) 45%,
+      rgba(255, 150, 150, 0.25),
+      rgba(150, 20, 20, 0.1) 45%,
       rgba(90, 45, 8, 0.08) 75%
     );
 }
 
 
 /* =========================
-   将棋みたいにパチン！
+   駒を置く
+   パチン！
 ========================= */
 
 @keyframes piece-slam {
@@ -363,13 +369,15 @@ button {
 
 .game-info ol {
   margin: 0;
+
   padding-left: 28px;
 }
 
 .game-info li {
   margin-bottom: 9px;
 
-  color: rgba(255, 255, 255, 0.65);
+  color:
+    rgba(255, 255, 255, 0.65);
 }
 
 .game-info button {
